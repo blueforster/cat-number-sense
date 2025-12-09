@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>部落格 - 我的個人網站</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <h1 class="logo"><a href="index.html">貓探的數感隨筆</a></h1>
+                <ul class="nav-menu">
+                    <li><a href="index.html">首頁</a></li>
+                    <li><a href="blog.html" class="active">部落格</a></li>
+                    <li><a href="videos.html">講座影片</a></li>
+                    <li><a href="index.html#about">關於我</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container blog-layout">
+            <!-- 主要內容區域 -->
+            <div class="main-content">
+                <h2>部落格文章</h2>
+                
+                <div class="blog-posts">
+                    <article class="blog-post">
+                        <h3><a href="posts/sample-post.html">我的第一篇部落格文章</a></h3>
+                        <div class="post-meta">
+                            <span class="post-date">發表於：2024-01-15</span>
+                            <span class="post-category">分類：技術分享</span>
+                            <span class="post-views">👁 <span id="views-sample">載入中...</span> 次瀏覽</span>
+                        </div>
+                        <p class="post-excerpt">
+                            這是我的第一篇部落格文章的摘要。在這篇文章中，我將分享一些關於網站開發的心得體會...
+                        </p>
+                        <a href="posts/sample-post.html" class="read-more">閱讀全文 →</a>
+                    </article>
+
+                    <article class="blog-post">
+                        <h3><a href="posts/getting-started.html">如何開始學習程式設計</a></h3>
+                        <div class="post-meta">
+                            <span class="post-date">發表於：2024-01-10</span>
+                            <span class="post-category">分類：學習筆記</span>
+                            <span class="post-views">👁 <span id="views-getting-started">載入中...</span> 次瀏覽</span>
+                        </div>
+                        <p class="post-excerpt">
+                            對於初學者來說，學習程式設計可能會感到困惑。這篇文章將提供一些實用的建議和學習路徑...
+                        </p>
+                        <a href="posts/getting-started.html" class="read-more">閱讀全文 →</a>
+                    </article>
+                </div>
+            </div>
+
+            <!-- 側邊欄 -->
+            <aside class="sidebar">
+                <!-- 個人介紹卡片 -->
+                <div class="sidebar-card author-card">
+                    <div class="author-avatar">
+                        <img src="images/head_intro.jpg" alt="作者頭像" id="author-avatar">
+                    </div>
+                    <div class="author-info">
+                        <h3>貓探 Forster</h3>
+                        <p class="author-description">
+                            是一個喜歡閱讀、畫畫與AI運用的終身學習者。"數感"有多種涵義，它可以是數字的思考，也有多種感受的意思。在這邊會放一些關於數字思考，以及生活學習的所思所感。<br><br>照片放貓純粹是喜歡貓和貓咪數字偵探這個意象。
+                        </p>
+                        <div class="author-social">
+                            <a href="https://github.com/yourusername" target="_blank" title="GitHub">
+                                <span class="social-icon">📱</span>
+                            </a>
+                            <a href="https://youtube.com/@yourchannel" target="_blank" title="YouTube">
+                                <span class="social-icon">🎥</span>
+                            </a>
+                            <a href="mailto:your.email@example.com" title="Email">
+                                <span class="social-icon">📧</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 熱門文章 -->
+                <div class="sidebar-card popular-posts">
+                    <h3>熱門文章</h3>
+                    <div class="popular-post-list">
+                        <a href="posts/sample-post.html" class="popular-post-item">
+                            <span class="popular-post-title">我的第一篇部落格文章</span>
+                            <span class="popular-post-views">👁 <span class="view-count">載入中...</span></span>
+                        </a>
+                        <a href="posts/getting-started.html" class="popular-post-item">
+                            <span class="popular-post-title">如何開始學習程式設計</span>
+                            <span class="popular-post-views">👁 <span class="view-count">載入中...</span></span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- 文章分類 -->
+                <div class="sidebar-card categories">
+                    <h3>文章分類</h3>
+                    <ul class="category-list">
+                        <li><a href="#tech">技術分享 <span class="post-count">(1)</span></a></li>
+                        <li><a href="#learning">學習筆記 <span class="post-count">(1)</span></a></li>
+                        <li><a href="#tutorial">教學文章 <span class="post-count">(0)</span></a></li>
+                        <li><a href="#experience">經驗分享 <span class="post-count">(0)</span></a></li>
+                    </ul>
+                </div>
+
+                <!-- 標籤雲 -->
+                <div class="sidebar-card tags">
+                    <h3>熱門標籤</h3>
+                    <div class="tag-cloud">
+                        <span class="tag-item" data-weight="3">JavaScript</span>
+                        <span class="tag-item" data-weight="2">HTML</span>
+                        <span class="tag-item" data-weight="2">CSS</span>
+                        <span class="tag-item" data-weight="1">React</span>
+                        <span class="tag-item" data-weight="2">程式設計</span>
+                        <span class="tag-item" data-weight="1">前端開發</span>
+                        <span class="tag-item" data-weight="1">學習</span>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 我的個人網站. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="background.js"></script>
+</body>
+</html>

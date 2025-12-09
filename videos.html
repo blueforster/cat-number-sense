@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>講座影片 - 我的個人網站</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .video-thumbnail-custom {
+            position: relative;
+            cursor: pointer;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s ease;
+            background: #f0f0f0;
+            aspect-ratio: 16/9;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .video-thumbnail-custom:hover {
+            transform: scale(1.02);
+        }
+        .video-thumbnail-custom img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 60px;
+            height: 60px;
+            font-size: 24px;
+            cursor: pointer;
+            transition: background 0.3s ease;
+            z-index: 2;
+        }
+        .play-button:hover {
+            background: rgba(255, 0, 0, 0.8);
+        }
+        .thumbnail-placeholder {
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-size: 18px;
+            text-align: center;
+            padding: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="nav-container">
+                <h1 class="logo"><a href="index.html">貓探的數感隨筆</a></h1>
+                <ul class="nav-menu">
+                    <li><a href="index.html">首頁</a></li>
+                    <li><a href="blog.html">部落格</a></li>
+                    <li><a href="videos.html" class="active">講座影片</a></li>
+                    <li><a href="index.html#about">關於我</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container">
+            <h2>YouTube 講座影片</h2>
+            <p class="page-description">這裡收錄了我在 YouTube 上分享的讀書會講座和教學影片</p>
+            
+            <div class="videos-grid">
+                <!-- 影片 1 -->
+                <div class="video-card">
+                    <div class="video-thumbnail-custom" onclick="window.open('https://www.youtube.com/watch?v=mL0nB47FeYo', '_blank')">
+                        <img src="https://i3.ytimg.com/vi/mL0nB47FeYo/hqdefault.jpg" 
+                             alt="【打造你的商業數感力】賺錢公司成功秘密"
+                             onerror="this.onerror=null; this.src='https://i1.ytimg.com/vi/mL0nB47FeYo/hqdefault.jpg'; if(this.onerror) this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="thumbnail-placeholder" style="display: none;">
+                            <div>
+                                <h4>【打造你的商業數感力】</h4>
+                                <p>賺錢公司成功秘密</p>
+                            </div>
+                        </div>
+                        <button class="play-button">▶</button>
+                    </div>
+                    <div class="video-info">
+                        <h3>【打造你的商業數感力】賺錢公司成功秘密</h3>
+                        <p class="video-date">發布日期：2025-04-13</p>
+                        <p class="video-description">
+                            這個讀書會講座將帶您了解賺錢公司成功秘密這本書，包括書中提到的財報重要觀念。
+                        </p>
+                        <div class="video-tags">
+                            <span class="tag">數字力</span>
+                            <span class="tag">商業數感力</span>
+                            <span class="tag">賺錢公司</span>
+                        </div>
+                        <a href="https://www.youtube.com/watch?v=mL0nB47FeYo" target="_blank" class="btn btn-primary">在 YouTube 觀看</a>
+                    </div>
+                </div>
+
+                <!-- 影片 2 -->
+                <div class="video-card">
+                    <div class="video-thumbnail-custom" onclick="window.open('https://www.youtube.com/watch?v=K9hYEQA-Tn0', '_blank')">
+                        <img src="https://i3.ytimg.com/vi/K9hYEQA-Tn0/hqdefault.jpg" 
+                             alt="【打造你的商業數感力】一次看懂小數據"
+                             onerror="this.onerror=null; this.src='https://i1.ytimg.com/vi/K9hYEQA-Tn0/hqdefault.jpg'; if(this.onerror) this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="thumbnail-placeholder" style="display: none;">
+                            <div>
+                                <h4>【打造你的商業數感力】</h4>
+                                <p>一次看懂小數據</p>
+                            </div>
+                        </div>
+                        <button class="play-button">▶</button>
+                    </div>
+                    <div class="video-info">
+                        <h3>【打造你的商業數感力】一次看懂小數據</h3>
+                        <p class="video-date">發布日期：2025-03-14</p>
+                        <p class="video-description">
+                            瞭解日常小數據為什麼會影響你的快樂程度、你賺的錢，甚至是你的壽命。
+                        </p>
+                        <div class="video-tags">
+                            <span class="tag">數字思考</span>
+                            <span class="tag">數據識讀</span>
+                            <span class="tag">看懂數據</span>
+                        </div>
+                        <a href="https://www.youtube.com/watch?v=K9hYEQA-Tn0" target="_blank" class="btn btn-primary">在 YouTube 觀看</a>
+                    </div>
+                </div>
+
+                <!-- 影片 3 -->
+                <div class="video-card">
+                    <div class="video-thumbnail-custom" onclick="window.open('https://www.youtube.com/watch?v=lt3WDzOHtxc', '_blank')">
+                        <img src="https://i3.ytimg.com/vi/lt3WDzOHtxc/hqdefault.jpg" 
+                             alt="《深思快想》讀書會上集 - 找到問題的核心本質"
+                             onerror="this.onerror=null; this.src='https://i1.ytimg.com/vi/lt3WDzOHtxc/hqdefault.jpg'; if(this.onerror) this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="thumbnail-placeholder" style="display: none;">
+                            <div>
+                                <h4>《深思快想》讀書會上集</h4>
+                                <p>找到問題的核心本質</p>
+                            </div>
+                        </div>
+                        <button class="play-button">▶</button>
+                    </div>
+                    <div class="video-info">
+                        <h3>《深思快想》讀書會上集-找到問題的核心本質</h3>
+                        <p class="video-date">發布日期：2025-05-08</p>
+                        <p class="video-description">
+                            瞭解如何掌握商業流程的核心本質與因果關係。
+                        </p>
+                        <div class="video-tags">
+                            <span class="tag">深度思考</span>
+                            <span class="tag">問題本質</span>
+                            <span class="tag">因果關係圖</span>
+                        </div>
+                        <a href="https://www.youtube.com/watch?v=lt3WDzOHtxc" target="_blank" class="btn btn-primary">在 YouTube 觀看</a>
+                    </div>
+                </div>
+
+                <!-- 影片 4 -->
+                <div class="video-card">
+                    <div class="video-thumbnail-custom" onclick="window.open('https://www.youtube.com/watch?v=3FKzAk0Y8Io', '_blank')">
+                        <img src="https://i3.ytimg.com/vi/3FKzAk0Y8Io/hqdefault.jpg" 
+                             alt="《深思快想》讀書會下集-因果關係圖應用"
+                             onerror="this.onerror=null; this.src='https://i1.ytimg.com/vi/3FKzAk0Y8Io/hqdefault.jpg'; if(this.onerror) this.style.display='none'; this.nextElementSibling.style.display='flex';">
+                        <div class="thumbnail-placeholder" style="display: none;">
+                            <div>
+                                <h4>《深思快想》讀書會下集</h4>
+                                <p>因果關係圖應用</p>
+                            </div>
+                        </div>
+                        <button class="play-button">▶</button>
+                    </div>
+                    <div class="video-info">
+                        <h3>《深思快想》讀書會下集-因果關係圖應用</h3>
+                        <p class="video-date">發布日期：2025-05-08</p>
+                        <p class="video-description">
+                            應用因果關係圖的分析來理解商業流程的核心及應用。
+                        </p>
+                        <div class="video-tags">
+                            <span class="tag">深度思考</span>
+                            <span class="tag">問題本質</span>
+                            <span class="tag">因果關係圖</span>
+                        </div>
+                        <a href="https://www.youtube.com/watch?v=3FKzAk0Y8Io" target="_blank" class="btn btn-primary">在 YouTube 觀看</a>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="youtube-channel">
+                <h3>我的其他 YouTube 影片</h3>
+                <p>曾經辦過的線上讀書會或講座</p>
+                <a href="https://www.youtube.com/playlist?list=PLe86oeZLlkNwOh5Q0e2Uh4XQnkTuGX41E" class="btn btn-primary" target="_blank">
+                    商業數感力讀書會
+                </a>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 我的個人網站. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="background.js"></script>
+</body>
+</html>
