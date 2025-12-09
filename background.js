@@ -17,32 +17,49 @@
     function applyBackgroundSettings() {
         const settings = loadBackgroundSettings();
         const heroElement = document.querySelector('.hero');
-        
+
         if (!heroElement) return;
 
         // 移除現有的背景類別
         heroElement.classList.remove('has-background');
-        
+
         // 根據設定類型應用背景
         switch (settings.backgroundType) {
             case 'image':
                 if (settings.backgroundImage) {
                     applyCustomBackground(heroElement, settings.backgroundImage, settings.overlayOpacity);
+                } else {
+                    // 如果沒有設定，使用預設背景圖片
+                    applyDefaultBackground(heroElement);
                 }
                 break;
-            
+
             case 'unsplash':
                 if (settings.unsplashImage) {
                     applyCustomBackground(heroElement, settings.unsplashImage, settings.overlayOpacity);
+                } else {
+                    // 如果沒有設定，使用預設背景圖片
+                    applyDefaultBackground(heroElement);
                 }
                 break;
-            
+
             case 'gradient':
-            default:
                 // 保持原有的漸層背景
                 heroElement.style.removeProperty('--hero-bg-image');
                 break;
+
+            default:
+                // 預設使用背景圖片（當沒有任何設定時）
+                applyDefaultBackground(heroElement);
+                break;
         }
+    }
+
+    // 應用預設背景圖片
+    function applyDefaultBackground(element) {
+        // CSS 中已經設定了預設背景，這裡只需要確保樣式正確
+        element.classList.add('has-background');
+        // 不需要額外設定，因為 CSS 已經有預設的 background-image
     }
 
     // 應用自定義背景
