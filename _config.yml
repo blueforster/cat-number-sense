@@ -1,0 +1,55 @@
+# GitHub Pages 配置文件
+
+# 網站基本資訊
+title: 我的個人網站
+description: 一個包含部落格和 YouTube 講座影片的個人網站
+author: Forster
+email: forster.vision@gmail.com
+
+# GitHub Pages 設定
+baseurl: "" # 如果你的 repo 不是 username.github.io，請設定為 "/repo-name"
+url: "https://blueforster.github.io/cat-number-sense/" # 請替換為你的 GitHub Pages URL
+
+# 建立設定
+markdown: kramdown
+highlighter: rouge
+plugins:
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
+
+# 排除的檔案和目錄
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+# 包含的檔案
+include:
+  - _pages
+
+# 預設值
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+      author: "Your Name"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+# 社交媒體連結（可選）
+github_username: blueforster
+youtube_channel: your-channel-name
+
+# SEO 設定
+lang: zh-TW
+timezone: Asia/Taipei
