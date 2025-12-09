@@ -81,8 +81,8 @@ main {
     text-align: center;
     position: relative;
     overflow: hidden;
-    /* 預設背景圖片 */
-    background-image: url('images/cover1_n.jpg');
+    /* 預設背景圖片 - 使用絕對路徑以支援子目錄部署 */
+    background-image: url('/cat-number-sense/images/cover1_n.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
